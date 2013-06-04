@@ -23,8 +23,11 @@
     "url": "https://github.com/tolu/node-arduino-bose/issues"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "socket.io": "~0.9.14",
-    "express": "~3.x",
+    "express": "~3.x"
+=======
     "grunt": "~0.4.1"
+>>>>>>> 13825195eb6d9eb9bbf4542d93ba09311be2d38c
   }
 }
