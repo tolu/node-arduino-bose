@@ -21,5 +21,8 @@
   "gitHead": "02f9d7bc0df6d63212fd4617a6b5eb7af7fae4c3",
   "bugs": {
     "url": "https://github.com/tolu/node-arduino-bose/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
   }
 }
