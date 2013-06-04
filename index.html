@@ -2,37 +2,67 @@
 <head>
 	<title>Control thy Bose brotha!</title>
 	<link rel="stylesheet" type="text/css" href="components/pure/build/pure-min.css">
+	<style type="text/css">
+		body { padding:10px;}
+		.swipe {
+			overflow: hidden;
+			visibility: hidden;
+			position: relative;
+		}
+		.swipe-wrap {
+			overflow: hidden;
+			position: relative;
+		}
+		.swipe-wrap > div {
+			float:left;
+			width:100%;
+			position: relative;
+		}
+	</style>
 </head>
 <body>
 <div class="pure-g-r">
 	<div class="content">
+
 		<div class="pure-u-1">
-			<div class="content">
-				am i on top of the world?
+			<div id='slider' class='swipe'>
+				<div class='swipe-wrap'>
+					<div>room one</div>
+					<div>room two</div>
+					<div>room three</div>
+					<div>room four</div>
+					<div>room five</div>
+				</div>
 			</div>
 		</div>
-		<div class="pure-u-1-3">
-		        <h2 class="content-subead">Volume</h2>
-		        <button class="pure-button" data-cmd="2">+</button>
-		        <button class="pure-button" data-cmd="6">-</button>
-	    </div>
-	    <div class="pure-u-1-3">
-	    		<h2 class="content-subead">Control</h2>
-		        <button class="pure-button" data-cmd="4">Play/Pause</button>
-		        <button class="pure-button" data-cmd="14">Stop</button>
-		        <button class="pure-button" data-cmd="5">Next</button>
-		        <button class="pure-button" data-cmd="3">Prev</button>
-	    </div>
-	    <div class="pure-u-1-3">
-		        <h2 class="content-subead">Relax</h2>
-		        <button class="pure-button" data-cmd="1">ON/OFF</button>
-		        <button class="pure-button" data-cmd="15">Mute</button>
-		        <button class="pure-button" data-cmd="16">Mute All</button>
-		        <button class="pure-button" data-cmd="10">Aux</button>
+	
+		<div class="pure-g-r">
+			<div class="pure-u-1-3">
+			        <h2 class="content-subead">Volume</h2>
+			        <button class="pure-button" data-cmd="2">+</button>
+			        <button class="pure-button" data-cmd="6">-</button>
+		    </div>
+
+		    <div class="pure-u-1-3">
+		    		<h2 class="content-subead">Control</h2>
+			        <button class="pure-button" data-cmd="4">Play/Pause</button>
+			        <button class="pure-button" data-cmd="14">Stop</button>
+			        <button class="pure-button" data-cmd="5">Next</button>
+			        <button class="pure-button" data-cmd="3">Prev</button>
+		    </div>
+
+		    <div class="pure-u-1-3">
+			        <h2 class="content-subead">Relax</h2>
+			        <button class="pure-button" data-cmd="1">ON/OFF</button>
+			        <button class="pure-button" data-cmd="15">Mute</button>
+			        <button class="pure-button" data-cmd="16">Mute All</button>
+			        <button class="pure-button" data-cmd="10">Aux</button>
+		    </div>
 	    </div>
     </div>
 </div>
 <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="components/Swipe/swipe.js"></script>
 <script type="text/javascript" src="client.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-(function () {
+(function (window, $, Swipe) {
 	var commands = [
 		undefined,
 		"ON/OFF",
@@ -31,6 +31,19 @@
 
 	var app = {};
 
+	function initSwipeSlider () {
+		app.slider = Swipe($('#slider').get(0), {
+			startSlide: 0,
+			speed: 400,
+			auto: 3000,
+			continous: false,
+			disableScroll: true,
+			stopPropagation: false,
+			callback: function (index, elem) {},
+			transitionEnd: function (index, elem) {}
+		});
+		// swipe api: [prev(), next(), getPos(), getNumSlides(), slide(index, duration)]
+	}
 
 	function setupEventListeners () {
 		$('button').on('click', onButtonClicked);
@@ -41,7 +54,12 @@
 		console.log('You clicked : ' + commands[cmd]);
 	}
 
-	setupEventListeners();
+	function init () {
+		setupEventListeners();
+		initSwipeSlider();
+	}
 
-	return app;
-}());
+	init();
+
+	window.app = app;
+}(window, jQuery, Swipe));

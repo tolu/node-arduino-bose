@@ -1,0 +1,25 @@
+{
+  "name": "Swipe",
+  "version": "2.0.0",
+  "main": [
+    "./swipe.js"
+  ],
+  "author": {
+    "name": "Brad Birdsall"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/*.html",
+    "**/*.css",
+    "Gruntfile.js"
+  ],
+  "gitHead": "74a46a9226ee171626e747da9f9ed1345957cac9",
+  "readme": "## Usage\r\nSwipe only needs to follow a simple pattern. Here is an example:\r\n\r\n``` html\r\n<div id='slider' class='swipe'>\r\n  <div class='swipe-wrap'>\r\n    <div></div>\r\n    <div></div>\r\n    <div></div>\r\n  </div>\r\n</div>\r\n```\r\n\r\nAbove is the initial required structure– a series of elements wrapped in two containers. Place any content you want within the items. The containing div will need to be passed to the Swipe function like so:\r\n\r\n``` js\r\nwindow.mySwipe = Swipe(document.getElementById('slider'));\r\n```\r\n\r\nI always place this at the bottom of the page, externally, to verify the page is ready.\r\n\r\nAlso Swipe needs just a few styles added to your stylesheet:\r\n\r\n``` css\r\n.swipe {\r\n  overflow: hidden;\r\n  visibility: hidden;\r\n  position: relative;\r\n}\r\n.swipe-wrap {\r\n  overflow: hidden;\r\n  position: relative;\r\n}\r\n.swipe-wrap > div {\r\n  float:left;\r\n  width:100%;\r\n  position: relative;\r\n}\r\n```\r\n\r\n## Config Options\r\n\r\nSwipe can take an optional second parameter– an object of key/value settings:\r\n\r\n- **startSlide** Integer *(default:0)* - index position Swipe should start at\r\n\r\n-\t**speed** Integer *(default:300)* - speed of prev and next transitions in milliseconds.\r\n\r\n- **auto** Integer - begin with auto slideshow (time in milliseconds between slides)\r\n\r\n- **continuous** Boolean *(default:true)* - create an infinite feel with no endpoints\r\n\r\n- **disableScroll** Boolean *(default:false)* - stop any touches on this container from scrolling the page\r\n\r\n- **stopPropagation** Boolean *(default:false)* - stop event propagation\r\n \r\n-\t**callback** Function - runs at slide change.\r\n\r\n- **transitionEnd** Function - runs at the end slide transition.\r\n\r\n### Example\r\n\r\n``` js\r\n\r\nwindow.mySwipe = new Swipe(document.getElementById('slider'), {\r\n  startSlide: 2,\r\n  speed: 400,\r\n  auto: 3000,\r\n  continuous: true,\r\n  disableScroll: false,\r\n  stopPropagation: false,\r\n  callback: function(index, elem) {},\r\n  transitionEnd: function(index, elem) {}\r\n});\r\n\r\n```\r\n\r\n## Swipe API\r\n\r\nSwipe exposes a few functions that can be useful for script control of your slider.\r\n\r\n`prev()` slide to prev\r\n\r\n`next()` slide to next\r\n\r\n`getPos()` returns current slide index position\r\n\r\n`slide(index, duration)` slide to set index position (duration: speed of transition in milliseconds)\r\n\r\n## Browser Support\r\nSwipe is now compatable with all browsers, including IE7+. Swipe works best on devices that supports CSS transforms and touch, but can be used without these as well. A few helper methods determine touch and CSS transition support and choose the proper animation methods accordingly.\r\n\r\n## Who's using Swipe\r\n<img src='http://swipejs.com/assets/swipe-cnn.png' width='170'>\r\n<img src='http://swipejs.com/assets/swipe-airbnb.png' width='170'>\r\n<img src='http://swipejs.com/assets/swipe-nhl.png' width='170'>\r\n<img src='http://swipejs.com/assets/swipe-thinkgeek.png' width='170'>  \r\n<img src='http://swipejs.com/assets/swipe-snapguide.png' width='170'>\r\n\r\nShoot me a [note](mailto:brad@birdsall.co) if you want you're logo here\r\n",
+  "readmeFilename": "README.md",
+  "_id": "Swipe@2.0.0",
+  "description": "Swipe only needs to follow a simple pattern. Here is an example:",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bradbirdsall/Swipe.git"
+  }
+}
